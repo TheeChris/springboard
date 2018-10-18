@@ -18,7 +18,9 @@ Since we are using a Bernoulli distribution, the central tendency will group aro
 
 **Significance Level (&alpha;)**: 0.05
 
-<img src="img/callback_prob.png" alt="Callback probabilities" style="width:500px;float:right">First, we calculate the sample mean of getting a callback for the entire sample and then broken down into our two groups (black / white applicants). We get a sample mean probability of 0.080 for getting a callback. Among White applicants, the probability climbs to 0.097, while Black applicants drop to 0.064. This gives us a sample difference of means of 0.032 with a standard error of 0.0078.
+First, we calculate the sample mean of getting a callback for the entire sample and then broken down into our two groups (black / white applicants). We get a sample mean probability of 0.080 for getting a callback. Among White applicants, the probability climbs to 0.097, while Black applicants drop to 0.064. This gives us a sample difference of means of 0.032 with a standard error of 0.0078.
+
+![Callback probability](img/callback_prob.png)
 
 We then use standard frequentist statistics to calculate the p-value of seeing a difference of means as extreme as 0.032 assuming the null hypothesis. We calculate the 95% confidence interval for our difference of means to be between 0.01675 and 0.04731. We can already see that this does not include a difference of 0.0, but we will go ahead and calculate our z-score and p-value. These are 4.1084 and 0.0000398 respectively. This is well below our &alpha; of 0.05, so we can reject the null hypothesis. However, we will also compute a bootstrap analysis in order to gain greater insight into what the true population statistic may look like.
 
