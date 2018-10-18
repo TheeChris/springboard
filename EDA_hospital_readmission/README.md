@@ -42,7 +42,7 @@ Read the following results/report. While you are reading it, think about if the 
 
 ### Setup an appropriate hypothesis test
 **H<sub>0</sub>**: There is no relationship between number of discharges and excess readmission ratios.<br />
-$\alpha$ = 0.01
+&alpha; = 0.01
 
 First, we will test this hypothesis by examining if there is a significant difference in the means of facilities with large and small number of discharges as compared to the sample mean.
 
@@ -69,7 +69,7 @@ The following table shows z-score and p-value of the calculcated mean excess rea
 
 On average, the small and large facilities have a difference in excess readmission ratios of 0.0435. This gives us a Cohen's d value of 0.5445, implying that the number or discharges (or approximate facility size) seems to have a moderate effect on the excess readmission ratio.
 
-A pairs bootstrap analysis may provide further insight into the correlation between excess readmission and facility size. For this analysis, 10,000 sample means were calculated for slope, Pearson r, and r<sup>2. Their means and confidence intervals are as follows:
+A pairs bootstrap analysis may provide further insight into the correlation between excess readmission and facility size. For this analysis, 10,000 sample means were calculated for slope, Pearson r, and r<sup>2</sup>. Their means and confidence intervals are as follows:
 
 | Statistics    | Mean     | 99% Confidence Interval |
 | ------------- | -------- | ----------------------- |
