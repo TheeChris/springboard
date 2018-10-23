@@ -21,6 +21,17 @@ This project entails gathering data from the CDC and U.S. Census Bureau API and 
 
 
 ## Mini-projects
+### [Using Logistic Regression to Determine Sex based on Height and Weight](logistic_regression)
+This was a quick project that focused on the mathematics of logistic regression and used `scikit-learn` for implementation. Grid search was used to improve the model through hyperparameter tuning.
+
+**Key Skills**
+
+* using `scikit-learn` to implement logistic regression model
+* use `GridSearchCV` to optimize hyperparameter tuning
+* gain visual understanding of logistic regression model using plots
+
+![Deterministic Probabilities](logistic_regression/logreg_prob.png)
+
 ### [Predicting Housing Prices with Linear Regression](linear_regression)
 Using the Boston Housing Data Set, this mini-project applies linear regression using the `statsmodels` and `scikit-learn` libraries to create and compare predictive models. 
 
