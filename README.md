@@ -8,6 +8,7 @@ This project entails gathering data from the CDC and U.S. Census Bureau API and 
 
 * Data wrangling and cleaning
 * Exploratory Data Analysis
+* Inferential Statistics
 * Data Visualization (including data maps)
 
 **Data Sources**
