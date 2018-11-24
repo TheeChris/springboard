@@ -14,7 +14,7 @@
 
 ​	Of the algorithms used, Gradient Boosted Decision Trees produced the best fit models, with stochastic gradient boosting showing a slight improvement in prediction accuracy (and a decrease in overfitting) compared to XGBoost. it should be noted that the standard R<sup>2</sup> score of the XGBoost model is higher than the stochastic gradient boosting. However, when we use the adjusted R<sup>2</sup> to penalize features that do not add information to the model, we see that XGBoost's R<sup>2</sup> score was being artificially inflated due to the sheer number of features. The residual plots provide a visual sense of how close the model's predictions were to the actual values. The root mean squared error (RMSE) tells us that we expect 95% of the predicted rates to be within 0.64 of the actual rate of chronic kidney disease (in other words, just over half a percent off of the actual value).
 
-<img src='img\GBR_residual_plot.png' width=385 align='left'/><img src='img/xgb_residuals.png' width=385 align='right'/>
+<p><img src='img\GBR_residual_plot.png' width=385 align='left'/><img src='img/xgb_residuals.png' width=385 align='right'/></p>
 
 
 
