@@ -16,6 +16,8 @@
 
 <img src='img\GBR_residual_plot.png' width=385 align='left'/><img src='img/xgb_residuals.png' width=385 align='right'/>
 
+
+
 ## Improving the Model
 
 ​	To improve the stochastic gradient boosting model, four hyperparameters were chosen for tuning due to their effect on reducing overfitting: the size of the tree (n_estimators), the maximum depth of the tree (max_depth), the fraction of samples to be used for fitting (subsample), and shrinkage (learning_rate). Grid search using 5-fold cross-validation was used to determine the best performance at 900 estimators. Setting the number of estimators higher produced greater overfitting. 
@@ -26,7 +28,7 @@ Validation curves were visualized to determine the remaining hyperparameters.
 
 <img src="img/GBR_maxdepth.png" alt="Max Depth" width="390" align="left" /> <img src="img/gb_subsample.png" alt="colsample" width="390" align="right"/>
 
-<img src="img/gbr_learning_rate.png" alt="Learning Rate"/>
+![Learning Rate](img/gbr_learning_rate.png)
 
 Max depth and shrinkage appeared to perform best when set to their respective defaults. The final model utilized the following hyperparameters:
 
