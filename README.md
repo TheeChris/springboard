@@ -4,7 +4,7 @@ This repository houses the projects completed during my time in [Springboard's D
 ## Capstone 1: [Predicting the Hyper-local Prevalence of Chronic Kidney Disease](predicting_chronic_disease)
 Chronic kidney disease (CKD) has been on the rise in recent years and is a major cause of mortality and health expenditure in the United States. This project uses 235 features extracted from the U.S. Census Bureau API to test whether hyper-local rates of CKD can be determined using readily available demographic data. These features include data on age, sex, marital status, disability, employment, profession, household type, housing costs, and type of insurance. Regression and ensemble methods were used to predict rates of chronic kidney disease. Ultimately, stochastic gradient boosting proved to be the best model with a predictive accuracy of 83.94%.
 
-![CKD Feature Importance](predicting_chronic_disease\img\GBR_feature_importance.png)
+![CKD Feature Importance](predicting_chronic_disease/img/GBR_feature_importance.png)
 
 ## Capstone 2
 
@@ -41,7 +41,7 @@ Using one dataset detailing marketing email campaigns and another with customer 
 * visualize clustering with PCA dimension reduction and tSNE
 
 
-![tSNE 2D map of customers](clustering\tsne_map.png)
+![tSNE 2D map of customers](clustering/tsne_map.png)
 
 ### [Using Logistic Regression to Determine Sex based on Height and Weight](logistic_regression)
 This was a quick project focusing on the mathematics of logistic regression and used `scikit-learn` for implementation. Grid search was used to improve the model through hyperparameter tuning.
