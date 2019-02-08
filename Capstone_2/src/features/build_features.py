@@ -11,4 +11,5 @@ def clean_and_tokenize(text):
     t = str.maketrans(dict.fromkeys(punc_list, " "))
     text = text.lower().translate(t)
     tokens = word_tokenize(text)
+    
     return tokens
