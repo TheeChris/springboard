@@ -28,4 +28,4 @@ Table of Contents
 
 **Latent Dirichlet Allocation Topic Modelling**
 
-![LDA Topics](C:\Users\echri\Desktop\springboard\Capstone_2\reports\figures\lda_topic_distro.png)
+![LDA Topics](reports\figures\lda_topic_distro.png)
