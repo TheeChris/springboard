@@ -5,7 +5,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import roc_curve, auc
 from sklearn.model_selection import validation_curve
 
-def plot_confusion_matrix(cm, classes,
+def plot_confusion_matrix(cm, classes, ax,
                           normalize=False,
                           title='Confusion matrix',
                           cmap=plt.cm.Blues):
@@ -21,26 +21,26 @@ def plot_confusion_matrix(cm, classes,
 
     print(cm)
 
-    plt.imshow(cm, cmap=cmap)
-    plt.title(title)
-    plt.colorbar(shrink=0.7)
+    im = ax.imshow(cm, cmap=cmap, aspect='auto')
+    ax.set_title(title)
+    plt.colorbar(im, ax=ax, shrink=0.7)
     tick_marks = np.arange(len(classes))
-    plt.xticks(tick_marks, classes, rotation=45)
-    plt.yticks(tick_marks, classes)
-    plt.grid(linewidth=0)
+    ax.set_xticks(tick_marks, classes)
+    ax.xaxis.set_tick_params(rotation=45)
+    ax.set_yticks(tick_marks, classes)
+    ax.grid(linewidth=0)
 
     fmt = '.2f' if normalize else 'd'
     thresh = cm.max() / 2.
     for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
-        plt.text(j, i, format(cm[i, j], fmt),
+        ax.text(j, i, format(cm[i, j], fmt),
                  horizontalalignment="center",
                  color="white" if cm[i, j] > thresh else "black")
 
-    plt.ylabel('True label')
-    plt.xlabel('Predicted label')
-    plt.tight_layout()
+    ax.set_ylabel('True label')
+    ax.set_xlabel('Predicted label')
     
-def draw_roc_curve(model, features, target):
+def draw_roc_curve(model, features, target, ax):
     '''
     A function to draw the ROC curve and compute ROC-AUC score.
     model = a fitted model
@@ -52,16 +52,16 @@ def draw_roc_curve(model, features, target):
     fpr, tpr, threshold = roc_curve(target, preds)
     roc_auc = auc(fpr, tpr)
     
-    plt.title('Receiver Operating Characteristic')
-    plt.plot(fpr, tpr, 'b', label = 'AUC = %0.4f' % roc_auc)
-    plt.legend(loc = 'lower right')
-    plt.plot([0, 1], [0, 1],'r--')
-    plt.xlim([0, 1])
-    plt.ylim([0, 1])
-    plt.ylabel('True Positive Rate')
-    plt.xlabel('False Positive Rate')
+    ax.set_title('Receiver Operating Characteristic')
+    ax.plot(fpr, tpr, 'b', label = 'AUC = %0.4f' % roc_auc)
+    ax.legend(loc = 'lower right')
+    ax.plot([0, 1], [0, 1],'r--')
+    ax.set_xlim([0, 1])
+    ax.set_ylim([0, 1])
+    ax.set_ylabel('True Positive Rate')
+    ax.set_xlabel('False Positive Rate')
     
-def draw_validation_curve(model, param_range, param, name,
+def draw_validation_curve(model, param_range, param, name, ax,
                           features, labels, metric='roc_auc', cv=3, n_jobs=1, title=None):
     '''
     A function to draw a validation curve using cross-validation.
